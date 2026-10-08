@@ -2,12 +2,12 @@
 // Timer Interrupt (Internal)
 // Embedded IoT System Fall-2026
 
-// Name: xyz                  Reg#: 1234
+// Name: Hassan Gulzar                  Reg#: 1068
 
 
 #include <Arduino.h>
 
-#define LED 4
+#define LED 2
 
 hw_timer_t *My_timer = NULL;
 
