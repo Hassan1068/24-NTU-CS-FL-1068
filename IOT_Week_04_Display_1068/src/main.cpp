@@ -1,5 +1,3 @@
-
-
 //Hassan Gulzar    //24_NTU_CS_FL_1068
 
 #include <Arduino.h>
@@ -48,6 +46,14 @@ void setup() {
     Serial.println("OLED initialized successfully.");
 }
 
+
 void loop() {
-    // Add your application code here.
+    display.clearDisplay();
+    display.setTextSize(1);
+    display.setTextColor(SSD1306_WHITE);
+
+    display.setCursor(0, 0);
+    display.println("HELLO IOT");
+
+    display.display();
 }
