@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "author": "25. Qonita Qotrunnada",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": { "env": "micropython-20260406-v1.28.0" }
+    },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -86.1, "left": -120.6, "attrs": {} },
+    {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": 22.34,
+      "left": 144.23,
+      "attrs": { "i2cAddress": "0x3c" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:GND", "esp:GND.2", "black", [ "v0", "h28.8" ] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "v28.8", "h76.8", "v-48", "h33.41" ] ],
+    [ "dht1:SDA", "esp:19", "green", [ "h0.1", "v144" ] ],
+    [ "oled1:GND", "esp:GND.2", "black", [ "v0", "h-76.8" ] ],
+    [ "oled1:VCC", "esp:3V3", "red", [ "v-9.6", "h-182.25", "v0" ] ],
+    [ "oled1:SCL", "esp:22", "yellow", [ "v-19.2", "h-76.5", "v38.4" ] ],
+    [ "oled1:SDA", "esp:21", "gold", [ "v-28.8", "h-86.33", "v76.8" ] ]
+  ],
+  "dependencies": {}
+}
