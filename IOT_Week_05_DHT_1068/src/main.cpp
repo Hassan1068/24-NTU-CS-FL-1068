@@ -77,7 +77,7 @@ void loop() {
     display.setCursor(0, 36);
     display.print("Temp: ");
     display.print(temperature, 1);
-    display.println(" C");
+    display.println("  C");
 
     display.display();
     delay(2000);
